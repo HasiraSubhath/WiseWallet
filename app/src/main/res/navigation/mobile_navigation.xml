@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.github.deviants.wisewallet.presentation.home.HomeFragment"
+        android:label="@string/home_fragment_title"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_addItemFragment"
+            app:destination="@id/addItemFragment"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_list"
+        android:name="com.github.deviants.wisewallet.presentation.list.TransactionListFragment"
+        android:label=""
+        tools:layout="@layout/fragment_transaction_list" >
+        <action
+            android:id="@+id/action_navigation_list_to_itemDetailFragment"
+            app:destination="@id/itemDetailFragment" />
+        <action
+            android:id="@+id/action_navigation_list_to_addItemFragment"
+            app:destination="@id/addItemFragment"
+            app:popUpTo="@id/navigation_list"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.github.deviants.wisewallet.presentation.settings.SettingsFragment"
+        android:label="@string/settings_fragment_title"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_navigation_settings_to_secretFragment"
+            app:destination="@id/secretFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemDetailFragment"
+        android:name="com.github.deviants.wisewallet.presentation.details.ItemDetailFragment"
+        android:label="@string/detail_fragment_title"
+        tools:layout="@layout/fragment_item_detail">
+        <argument
+            android:name="item_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_itemDetailFragment_to_addItemFragment"
+            app:destination="@id/addItemFragment"
+            app:popUpTo="@id/itemDetailFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.github.deviants.wisewallet.presentation.adding.AddTransactionFragment"
+        android:label="{title}" >
+        <action
+            android:id="@+id/action_addItemFragment_to_navigation_list"
+            app:destination="@id/navigation_list" />
+        <argument
+            android:name="item_id"
+            app:argType="integer" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_chart"
+        android:name="com.github.deviants.wisewallet.presentation.chart.ChartFragment"
+        android:label="@string/chart_fragment_title"
+        tools:layout="@layout/fragment_chart" >
+        <action
+            android:id="@+id/action_navigation_chart_to_addItemFragment"
+            app:destination="@id/addItemFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/secretFragment"
+        android:name="com.github.deviants.wisewallet.presentation.secret.SecretFragment"
+        android:label="@string/secret_fragment_title"
+        tools:layout="@layout/fragment_secret" >
+    </fragment>
+    <fragment
+        android:id="@+id/accountsFragment"
+        android:name="com.github.deviants.wisewallet.presentation.accounts.AccountsFragment"
+        android:label="Accounts"
+        tools:layout="@layout/fragment_accounts" />
+    <fragment
+        android:id="@+id/goalsFragment"
+        android:name="com.github.deviants.wisewallet.presentation.goals.GoalsFragment"
+        android:label="Goals"
+        tools:layout="@layout/fragment_goals" />
+    <fragment
+        android:id="@+id/utilsFragment"
+        android:name="com.github.deviants.wisewallet.presentation.utils.UtilsFragment"
+        android:label="Utilities"
+        tools:layout="@layout/fragment_utils" />
+
+</navigation>

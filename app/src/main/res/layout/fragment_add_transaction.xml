@@ -1,0 +1,158 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginHorizontal="16dp"
+            android:id="@+id/radio_group_cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeWidth="0dp">
+
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:checkedButton="@id/radiobutton_expense"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/radiobutton_expense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_selector_expense"
+                    android:button="@android:color/transparent"
+                    android:contextClickable="true"
+                    android:gravity="center"
+                    android:text="@string/expense"
+                    android:fontFamily="@font/tomorrow_medium"
+                    android:textColor="@drawable/radio_text_color"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/radiobutton_income"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_selector_income"
+                    android:button="@android:color/transparent"
+                    android:contextClickable="true"
+                    android:gravity="center"
+                    android:text="@string/income"
+                    android:fontFamily="@font/tomorrow_medium"
+                    android:textColor="@drawable/radio_text_color"
+                    android:textStyle="bold" />
+
+            </RadioGroup>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categories_rv"
+            android:layout_width="match_parent"
+            android:clipToPadding="false"
+            android:paddingHorizontal="16dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/radio_group_cv"
+            tools:itemCount="1"
+            tools:listitem="@layout/category_item" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginHorizontal="16dp"
+            android:id="@+id/item_price_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/price_hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/categories_rv"
+            app:prefixText="USD">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/item_price"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginHorizontal="16dp"
+            android:id="@+id/item_description_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/description_hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_price_label">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/item_description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textAutoComplete"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:layout_marginHorizontal="16dp"
+            android:id="@+id/item_is_compulsory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checked="true"
+            android:text="@string/compulsory_expense"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_description_label" />
+
+        <CalendarView
+
+            android:layout_marginHorizontal="16dp"
+            android:layout_gravity="center"
+            android:id="@+id/calendarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_is_compulsory" />
+
+        <Button
+            android:id="@+id/save_action"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/save_button"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
+    </LinearLayout>
+
+</ScrollView>

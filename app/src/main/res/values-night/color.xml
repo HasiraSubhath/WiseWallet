@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="dynamic_main_color">#E6E1E5</color>
+    <color name="dynamic_main_color_reversed">#1C1B1F</color>
+
+    <color name="dynamic_white_black">#000000</color>
+    <color name="dynamic_black_white">#FFFFFF</color>
+    <color name="dynamic_primary">@color/md_theme_dark_primary</color>
+</resources>

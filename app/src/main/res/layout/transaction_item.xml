@@ -1,0 +1,112 @@
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/item_transaction"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:clickable="false"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:clickable="false"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Вторник, 20 декабря"
+            tools:visibility="visible" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:clickable="true"
+            android:id="@+id/transaction_cv"
+            android:layout_width="match_parent"
+            android:layout_height="92dp"
+            app:cardElevation="1dp"
+            app:strokeWidth="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/item_category_logo"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/icon_bg"
+                    android:contentDescription="@string/app_name"
+                    android:padding="24dp"
+                    android:src="@drawable/ic_baseline_check_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/item_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/item_category_logo"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Category" />
+
+                <TextView
+                    android:id="@+id/item_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="end"
+                    android:maxLength="16"
+                    android:maxLines="1"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toEndOf="@id/item_category_logo"
+                    app:layout_constraintTop_toBottomOf="@id/item_category"
+                    tools:text="Description" />
+
+                <TextView
+                    android:id="@+id/item_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:ellipsize="end"
+                    android:maxLength="14"
+                    android:maxLines="1"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:textColor="@color/expense_color"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/item_category"
+                    tools:text="- 12.31 Br" />
+
+                <TextView
+                    android:id="@+id/item_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:ellipsize="end"
+                    android:maxLength="14"
+                    android:maxLines="1"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="@id/item_price"
+                    app:layout_constraintTop_toBottomOf="@id/item_price"
+                    tools:text="10:00" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>

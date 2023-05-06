@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.home.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:nestedScrollingEnabled="false"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_total_balance"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                app:cardElevation="1dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/total_balance_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="34dp"
+                        android:text="@string/total_balance"
+                        android:fontFamily="@font/tomorrow_medium"
+                        android:textAllCaps="true"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_total_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:text="124.03 Br"
+                        android:textColor="@color/material_on_background_emphasis_high_type"
+                        android:textSize="24sp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:id="@+id/income_expense_layout"
+                android:layout_width="match_parent"
+                android:layout_height="121dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_total_income"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    app:cardElevation="1dp"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:id="@+id/total_income_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_income_logo"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/ic_circle_green"
+                            android:scaleType="center"
+                            android:src="@drawable/ic_baseline_arrow_upward_24"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/total_income_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginTop="3dp"
+                            android:text="@string/total_income"
+                            android:fontFamily="@font/tomorrow_medium"
+                            android:textAllCaps="true"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_total_income"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginTop="12dp"
+                            android:text="383.51 Br"
+                            android:textColor="@color/material_on_background_emphasis_high_type"
+                            android:textSize="24sp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_total_expense"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    app:cardElevation="1dp"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:id="@+id/total_expense_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_expense_logo"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/ic_circle_red"
+                            android:scaleType="center"
+                            android:src="@drawable/ic_baseline_arrow_downward_24"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/total_expense_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginTop="3dp"
+                            android:text="@string/total_expense"
+                            android:fontFamily="@font/tomorrow_medium"
+                            android:textAllCaps="true"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_total_expense"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginTop="12dp"
+                            android:text="257.48 Br"
+                            android:textColor="@color/material_on_background_emphasis_high_type"
+                            android:textSize="24sp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_could_save"
+                android:layout_width="match_parent"
+                android:layout_height="121dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                app:cardElevation="1dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:id="@+id/could_save_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_could_save_logo"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@drawable/ic_circle_yellow"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_baseline_arrow_outward_24"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/could_save_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginTop="3dp"
+                        android:text="YOUR TOTAL COMPULSORY EXPENSES"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_could_save"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginTop="12dp"
+                        android:text="13.18 Br"
+                        android:textColor="@color/material_on_background_emphasis_high_type"
+                        android:textSize="24sp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_pie_chart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="12dp"
+                app:cardElevation="1dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/pie_chart_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="34dp"
+                        android:text="@string/total_expenses"
+                        android:fontFamily="@font/tomorrow_medium"
+                        android:textAllCaps="true"
+                        android:textSize="12sp" />
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/pie_chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp"
+                        android:layout_margin="16dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/add_new_item"
+            android:src="@android:drawable/ic_input_add"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

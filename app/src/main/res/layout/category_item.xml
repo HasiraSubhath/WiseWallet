@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/category_cv"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/category_cardview_height"
+    android:layout_marginEnd="16dp"
+    app:cardElevation="4dp"
+    android:layout_marginVertical="8dp"
+    android:checkable="true"
+    android:clickable="true"
+    app:strokeWidth="0dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <View
+            android:id="@+id/view"
+            android:alpha="1"
+            android:layout_width="6dp"
+            android:layout_height="match_parent"
+            android:background="?attr/colorPrimary" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/category_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="8dp"
+            android:layout_toEndOf="@id/view"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/category_hint"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
