@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1036373355035",
+    "firebase_url": "https://kotlinmad-9dfae-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "kotlinmad-9dfae",
+    "storage_bucket": "kotlinmad-9dfae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036373355035:android:4985b2a3df8386000826be",
+        "android_client_info": {
+          "package_name": "com.example.kotlin_bill"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1036373355035-n0j9ejheklcl9nbqdaaiqqr673g31fbo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1vioYPq6166PGiHThfH9EU3ihL3NEn8s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1036373355035-n0j9ejheklcl9nbqdaaiqqr673g31fbo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

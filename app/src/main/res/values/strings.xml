@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">kotlin_bill</string>
+    <string name="bill_topic">Bills and Utility Management</string>
+
+</resources>
