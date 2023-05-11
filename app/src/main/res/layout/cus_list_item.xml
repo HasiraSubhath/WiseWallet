@@ -7,6 +7,14 @@
     app:cardCornerRadius="8dp"
     android:layout_margin="8dp">
 
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        app:srcCompat="@mipmap/bg0"
+        android:alpha="0.8"
+        android:scaleType="fitXY"/>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,5 +45,8 @@
         </LinearLayout>
 
     </LinearLayout>
+
+
+
 
 </androidx.cardview.widget.CardView>

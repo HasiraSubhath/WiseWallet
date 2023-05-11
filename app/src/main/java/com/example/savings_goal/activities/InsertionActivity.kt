@@ -14,9 +14,11 @@ import com.example.savings_goal.R
 import com.example.savings_goal.models.CustomerModel
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.maltaisn.calcdialog.CalcDialog
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale
+
 
 
 class InsertionActivity : AppCompatActivity() {
@@ -28,6 +30,8 @@ class InsertionActivity : AppCompatActivity() {
     private lateinit var stNote: EditText
     private lateinit var btnSaveData: Button
     private lateinit var etDatePicker: TextView
+    private lateinit var etMoneyGoal: EditText
+
 //  private lateinit var btnDatePicker: Button
 
     private lateinit var dbRef: DatabaseReference
@@ -40,6 +44,11 @@ class InsertionActivity : AppCompatActivity() {
 
         etDatePicker = findViewById(R.id.etDate)
 //        btnDatePicker = findViewById(R.id.btnDatePicker)
+
+//        val editText = findViewById<EditText>(R.id.etMoneyGoal)
+//        editText.setOnClickListener {
+//            showCalculatorDialog()
+//        }
 //
         val myCalendar = Calendar.getInstance()
 
@@ -70,6 +79,20 @@ class InsertionActivity : AppCompatActivity() {
         }
 
     }
+
+//    private fun showCalculatorDialog() {
+//        val currentValue = etMoneyGoal.text.toString().toDoubleOrNull() ?: 0.0
+//        val calcDialog = CalcDialog.builder(requireContext())
+//            .startValue(currentValue)
+//            .showNegativeButton(true)
+//            .decimalSeparator('.')
+//            .maxDigits(12) // optional
+//            .alwaysShowSign(false) // optional
+//            .callback { result ->
+//                etMoneyGoal.setText(result.toString())
+//            }
+//            .show()
+//    }
 
     private fun updateLable(myCalendar: Calendar) {
             val myFormat = "dd/MM/yyyy"

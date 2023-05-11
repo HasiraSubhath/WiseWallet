@@ -90,7 +90,7 @@ class SaveGoalsDetailsActivity : AppCompatActivity() {
         //passing data
         tsId.text = intent.getStringExtra("id")?.substring(0, 5) ?: ""
         tsSaveGoal.text = intent.getStringExtra("saveGoal")
-        tsMoneyGoal.text = intent.getStringExtra("moneyGoal")
+        tsMoneyGoal.text = "Rs." + "" + intent.getStringExtra("moneyGoal")
         tsDate.text = intent.getStringExtra("date")
         tsNote.text = intent.getStringExtra("note")
 

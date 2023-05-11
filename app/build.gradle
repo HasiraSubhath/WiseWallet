@@ -46,4 +46,5 @@ dependencies {
 
     implementation platform('com.google.firebase:firebase-bom:32.0.0')
     implementation 'com.google.firebase:firebase-database-ktx'
+    implementation "com.maltaisn:calcdialog:2.2.1"
 }
