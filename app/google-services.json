@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "786731083820",
+    "project_id": "savingsgoalskotlin",
+    "storage_bucket": "savingsgoalskotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786731083820:android:5455b48528f23c00fac989",
+        "android_client_info": {
+          "package_name": "com.example.savings_goal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786731083820-2d87fe5naipjgpkeol4nvlrpa0n3eoeq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlRLLqAo_8l86NHZ3zzrZxTxm4vAJuRmc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786731083820-2d87fe5naipjgpkeol4nvlrpa0n3eoeq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

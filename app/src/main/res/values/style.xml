@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="PrimaryButton" parent="Widget.MaterialComponents.Button">
+        <item name="textAllCaps">true</item>
+        <item name="fontFamily">@font/extra_bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="PrimaryEditText" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="shapeAppearance">@style/Cut</item>
+        <item name="android:layout_margin">@dimen/_8sdp</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+    </style>
+
+    <style name="PrimaryEditTextDropdown" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+        <item name="shapeAppearance">@style/Cut</item>
+        <item name="android:layout_margin">@dimen/_8sdp</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+
+
+    </style>
+
+
+
+
+    <style name="TextInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxCollapsedPaddingTop">12dp</item>
+        <item name="colorOnSurface">@color/ap_transparent</item>
+
+    </style>
+
+
+    <style name="TextInputDropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxCollapsedPaddingTop">12dp</item>
+    </style>
+
+    <style name="titleText">
+        <item name="android:textSize">@dimen/_18sdp</item>
+        <item name="android:fontFamily">@font/extra_bold</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="contentText">
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:fontFamily">@font/ropot_regular</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/_8sdp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">10dp</item>
+
+    </style>
+
+    <style name="Cut" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+
+    <style name="AppThemeLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+
+        <item name="backgroundColor">#fcfcfc</item>
+
+        <item name="boxStrokeColor">@color/black</item>
+
+
+    </style>
+    <style name="Divider">
+        <item name="android:background">?android:attr/listDivider</item> //you can give your color here. that will change all divider color in your app.
+    </style>
+
+    <style name="Divider.Horizontal" parent="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item> // You can change thickness here.
+
+    </style>
+
+    <style name="Divider.Vertical" parent="Divider">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="AppThemeDark" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        >
+
+        <item name="backgroundColor">#303030</item>
+
+        <item name="boxStrokeColor">@color/white</item>
+
+
+    </style>
+
+    <style name="TextAppearance.AppTheme.TextInputLayout.HintTextAlt" parent="TextAppearance.MaterialComponents.Subtitle2">
+
+    </style>
+
+</resources>
